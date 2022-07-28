@@ -1,0 +1,55 @@
+
+.btn {
+    font: inherit;
+    cursor: pointer;
+    background: #230052;
+    border: 1px solid #230052;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    margin: 0;
+    position: relative;
+    width: 153px;
+    transform: translateY(-50%);
+    margin-left: 9rem;
+    margin-top: -2.5rem;
+
+}
+
+ .h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: x-large;
+    margin-left: 4.8rem;
+}
+
+.mainBody {
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.products {
+    width: 35%;
+    padding: 15px;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img, svg {
+    vertical-align: middle;
+}
+.pricing {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    line-height: 2.5;
+    font-size: x-large;
+    margin-right: auto;
+    margin-left: 0rem;
+}

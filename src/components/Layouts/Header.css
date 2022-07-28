@@ -1,0 +1,54 @@
+.up{
+    margin: auto;
+    background-color: black;
+    text-align: center;
+    height: 15vh;
+}
+.h3{
+    padding: 10px;
+}
+.down{
+    background-color: grey;
+    text-align: center;
+    height: 25vh;
+}
+
+.heada{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    padding: 30px;
+    text-decoration: none;
+   
+}
+
+.butt{
+    position: absolute;
+    right: 50px;
+    border-color: rgba(0, 153, 255, 0.616);
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.num{
+    position: absolute;
+    right: 30px;
+    color: white;
+}
+
+.h1{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 7rem;
+    padding: 40px;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: #95bcf0;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #95bcf0;
+}
