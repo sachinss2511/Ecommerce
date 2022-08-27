@@ -1,23 +1,33 @@
-import './CartItems.css'
-
+import React, { useContext } from 'react';
+import CartContext from '../Store/Cart-context';
+import './CartItems.css';
 const CartItems = (props) => {
-    const imgsrc = props.img;
-    console.log('in cartsitem');
+  const cartCntxt = useContext(CartContext);
+  const removeFromCart=(event)=>
+  {
+    event.preventDefault();
+    cartCntxt.removeItem(props.id)
+  }
+ const imgsrc = props.img;
+ const itemTotal=props.price*props.quantity
   return (
     <div className="container">
       <div className="row">
         <div className="col">
-          <span>{props.title}</span>
+          <span>{props.item}</span>
           <img src={imgsrc} alt="products" className="i"/>
         </div>
         <div className="col">
-          <span>{props.price}</span>
+          <span>{Number(props.price) }</span>
         </div>
         <div className="col">
-          <span>{props.amount}</span>
+          <span>{props.quantity}</span>
+        </div>
+        <div className="col">
+          <span>{itemTotal}</span>
+        <button className='btn btn-danger remove' onClick={removeFromCart}>Remove</button>
         </div>
       </div>
-      <button className='btn btn-danger remove'>Remove</button>
     </div>
   );
 };

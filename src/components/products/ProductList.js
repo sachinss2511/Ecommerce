@@ -1,21 +1,47 @@
-import "./ProductList.css";
+import React,{ Fragment, useContext } from "react";
+import CartContext from "../Store/Cart-context";
+// import { Link } from "react-router-dom";
+
+import './style.css';
 
 const ProductList = (props) => {
-  const addToCartHandler = () => {};
-  const imaging = props.img;
-  return (
+
+    const cartCntxt=useContext(CartContext);
+    
+    const addToCart=(event) =>{
+        event.preventDefault();
+        cartCntxt.addItem(
+           {
+               id:props.id,      
+               title:props.title,
+               imgsrc:props.img,
+               price:props.price,
+               quantity:props.quantity
+           }
+       );
       
-        <ul className="products">
-          <div className="h4">{props.title}</div>
-          <div>
-            <img src={imaging} alt='images'></img>
-          </div>
-          <div className="pricing">${props.price}</div>    
-            <button type="button" className="btn" onClick={addToCartHandler}>
-              Add to Cart
-            </button>
-        </ul>
-      
-  );
+    }
+
+    const imgsrc = props.img;
+    return (
+        <Fragment>
+            
+            <ul className="products">
+                
+            {/* <Link to={`store/${props.id}`}> */}
+                
+                <div><h4>{props.title}</h4></div>
+                <div>
+                    <img src={imgsrc} alt="products" />
+                </div>
+                <span> </span>
+                <div><h4>Rs.{props.price} </h4><button className="add" onClick={addToCart} >Add To Cart</button></div>
+                
+                {/* </Link> */}
+            </ul>
+            
+        </Fragment>
+    );
 };
+
 export default ProductList;
